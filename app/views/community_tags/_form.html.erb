@@ -1,0 +1,27 @@
+<%= form_with(model: community_tag, local: true) do |form| %>
+  <% if community_tag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(community_tag.errors.count, "error") %> prohibited this community_tag from being saved:</h2>
+
+      <ul>
+      <% community_tag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :tag_id %>
+    <%= form.number_field :tag_id, id: :community_tag_tag_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community_id %>
+    <%= form.number_field :community_id, id: :community_tag_community_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
