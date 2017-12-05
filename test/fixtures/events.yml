@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  community_id: 1
+  name: MyString
+  event_start_at: 2017-12-02 13:19:37
+  event_end_at: 2017-12-02 13:19:37
+  place: MyString
+
+two:
+  community_id: 1
+  name: MyString
+  event_start_at: 2017-12-02 13:19:37
+  event_end_at: 2017-12-02 13:19:37
+  place: MyString

@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :communities
+  resources :messages
+  resources :community_tags
+  resources :tags
+  resources :event_members
+  resources :members
+  resources :events
+  resources :skills
+  resources :users
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
