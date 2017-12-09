@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171209050504) do
 
   create_table "chat_messages", force: :cascade do |t|
@@ -18,6 +19,9 @@ ActiveRecord::Schema.define(version: 20171209050504) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+=======
+ActiveRecord::Schema.define(version: 20171209014639) do
+>>>>>>> fork_master_master
 
   create_table "communities", force: :cascade do |t|
     t.string "name"
@@ -93,6 +97,7 @@ ActiveRecord::Schema.define(version: 20171209050504) do
     t.text "freetext"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
