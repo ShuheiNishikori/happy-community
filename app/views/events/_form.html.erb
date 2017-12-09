@@ -10,12 +10,7 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :コミュニティID %>
-    <%= form.number_field :community_id, id: :event_community_id %>
-  </div>
-
+  
   <div class="field">
     <%= form.label :行事名 %>
     <%= form.text_field :name, id: :event_name %>
@@ -38,5 +33,6 @@
 
   <div class="actions">
     <%= form.submit "完了"%>
+    <%= link_to 'キャンセル', events_path %>
   </div>
 <% end %>
