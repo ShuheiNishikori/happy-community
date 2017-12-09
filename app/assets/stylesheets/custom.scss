@@ -5,6 +5,7 @@
 
 body {
 	padding-top: 60px;
+	background-color: #a8dba8;
 }
 
 section {
@@ -42,7 +43,7 @@ h2 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: #777;
+	color: black;
 }
 
 p{
@@ -68,3 +69,29 @@ p{
 	text-decoration: none;
 }
 
+
+img {
+	display: none;
+}
+.navbar-inverse {
+	background-color: black;
+	border-color: black;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+
+
+.jumbotron {
+	background-color: #a8dba8;
+}
+
+.jumbotron > a {
+	color: #ffffff;
+}
+
+.jumbotron > a:visited {
+	color: #ffffff;
+}
