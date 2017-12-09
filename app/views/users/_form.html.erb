@@ -46,6 +46,11 @@
     <%= form.text_area :freetext, id: :user_freetext %>
   </div>
 
+  <div class = "field">
+    <%= form.label :picture %>
+    <%= form.file_field :picture, id: :user_picture %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
