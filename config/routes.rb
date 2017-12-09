@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'chat_messages/index'
+
   resources :communities
   resources :messages
   resources :community_tags
