@@ -112,14 +112,10 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     method_source (0.9.0)
-<<<<<<< HEAD
-    mini_mime (1.0.0)
-=======
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mini_mime (0.1.4)
->>>>>>> fork_master_master
+    mini_mime (0.1.4)re
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     minitest-reporters (1.1.14)
