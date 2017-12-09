@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Community:</strong>
+  <strong>コミュニティ名:</strong>
   <%= @event.community_id %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>行事名:</strong>
   <%= @event.name %>
 </p>
 
 <p>
-  <strong>Event start at:</strong>
+  <strong>開始:</strong>
   <%= @event.event_start_at %>
 </p>
 
 <p>
-  <strong>Event end at:</strong>
+  <strong>終了:</strong>
   <%= @event.event_end_at %>
 </p>
 
 <p>
-  <strong>Place:</strong>
+  <strong>場所:</strong>
   <%= @event.place %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to '編集', edit_event_path(@event) %> |
+<%= link_to '戻る', events_path %>
