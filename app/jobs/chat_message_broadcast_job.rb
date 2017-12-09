@@ -1,7 +1,8 @@
 class ChatMessageBroadcastJob < ApplicationJob
   queue_as :default
 
-  def perform(*args)
+  def perform(chat_message)
+    ActionCable.server.broadcast 'chat_message_channel', message: chat_message.body
     # Do something later
   end
 end
