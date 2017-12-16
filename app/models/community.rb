@@ -1,5 +1,5 @@
 class Community < ApplicationRecord
 	has_many :events
 	has_many :members
-	has_many :c_tags
+	has_many :community_tags
 end
