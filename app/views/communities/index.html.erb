@@ -13,6 +13,7 @@
   <tbody>
     <% @communities.each do |community| %>
       <tr>
+        <td><%= community.id %></td>
         <td><%= community.name %></td>
         <td><%= link_to 'Show', community %></td>
         <td><%= link_to 'Edit', edit_community_path(community) %></td>

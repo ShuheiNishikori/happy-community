@@ -7,18 +7,22 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # config: utf-8
 
-Community.create(:name => '松江')
-Community.create(:name => '出雲')
-Community.create(:name => '大社')
+Community.create(name: '松江')
+Community.create(name: '出雲')
+Community.create(name: '安来')
+User.create(name: '松江太郎', age: 20, sex: 'man', area: '松江', email: 'matsue@taro.jp', 
+            freetext: '島根大学生だよ', password: 'matsutaro', password_confirmation: 'matsutaro')
+User.create(name: '出雲花子', age: 18, sex: 'woman', area: '出雲', email: 'izumo@hana.jp',
+            freetext: '出雲出身ではないよ', password: 'izumohana', password_confirmation: 'izumohana')
 
-Tags.create(:name => '野球')
-Tags.create(:name => 'バスケ')
-Tags.create(:name => 'サッカー')
+Tag.create(name: '野球')
+Tag.create(name: 'バスケ')
+Tag.create(name: 'サッカー')
 
-Events.create(:name => '学園祭')
-Events.create(:name => '定期演奏会')
-Events.create(:name => '盆踊り')
+Event.create(name: '学園祭', community_id: 1)
+Event.create(name: '定期演奏会', community_id: 2)
+Event.create(name: '盆踊り', community_id: 3)
 
-Skills.create(:name => '商業力')
-Skills.create(:name => '演奏力')
-Skills.create(:name => '体力')
+Skill.create(name: '商業力', user_id: 1)
+Skill.create(name: '演奏力', user_id: 2)
+Skill.create(name: '体力', user_id: 1)
