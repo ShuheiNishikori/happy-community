@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :skills
   resources :users
 
-  get 'home/index'
+  get '/home', to: 'home#index'
 
 
   #get 'static_pages/home'

@@ -10,3 +10,7 @@
 Community.create(:name => '松江')
 Community.create(:name => '出雲')
 Community.create(:name => '安来')
+User.create(:name => '松江太郎', :age => 20, :sex => 'man', :area => '松江', :email => 'matsue@taro.jp', 
+            :freetext => '島根大学生だよ', :password => 'matsutaro', :password_confirmation => 'matsutaro')
+User.create(:name => '出雲花子', :age => 18, :sex => 'woman', :area => '出雲', :email => 'izumo@hana.jp',
+            :freetext => '出雲出身ではないよ', :password => 'izumohana', :password_confirmation => 'izumohana')
