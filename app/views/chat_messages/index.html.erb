@@ -2,7 +2,7 @@
 <p>Find me in app/views/chat_messages/index.html.erb</p>
 <div id='chat_messages'>
   <% @chat_messages.each do |chat_message| %>
-    <div><%= chat_message.body %></div>
+    <div><%="#{chat_message.user_name}: #{chat_message.body} "%></div>
   <% end %>
 </div>
 <br/>
