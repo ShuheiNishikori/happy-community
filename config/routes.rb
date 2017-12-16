@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   resources :events
   resources :skills
   resources :users
+
+  get 'home/index'
+
+
   #get 'static_pages/home'
   #get 'static_pages/help'
   get '/help',  to: 'static_pages#help'
