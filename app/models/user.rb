@@ -8,10 +8,7 @@ class User < ApplicationRecord
 	has_secure_password
 	validates	:password, presence: true, length: {minimum:6}
 	validates 		:name, 	presence: true,	length: {maximum: 50}
-<<<<<<< HEAD
-	validates		:email, presence: true,	length: {maximum: 255}, uniqueness: { case_sensitive: false }
-end
-=======
+
 	validates		:email, presence: true,	length: {maximum: 255}
 	
 	def User.digest(string)
@@ -20,4 +17,3 @@ end
 	end
 
 end
->>>>>>> 5155cbb2c050f0bb63751de5aae45e463b27a3f1
