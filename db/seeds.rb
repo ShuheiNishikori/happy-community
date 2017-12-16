@@ -9,4 +9,4 @@
 
 Community.create(:name => '松江')
 Community.create(:name => '出雲')
-Community.create(:name => '大社')
+Community.create(:name => '安来')
