@@ -37,7 +37,7 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= image_tag @user.picture.thumb.url, :size => '60x60', :style => "border-radius:50%; background:url(@user.picture_url); " %>
+  <%= image_tag @user.picture.thumb.url, size: '60x60', style: "border-radius:50%; background:url(@user.picture_url); " if @user.picture? %>
 </p>
 
 
