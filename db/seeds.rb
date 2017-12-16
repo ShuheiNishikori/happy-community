@@ -10,3 +10,15 @@
 Community.create(:name => '松江')
 Community.create(:name => '出雲')
 Community.create(:name => '大社')
+
+Tags.create(:name => '野球')
+Tags.create(:name => 'バスケ')
+Tags.create(:name => 'サッカー')
+
+Events.create(:name => '学園祭')
+Events.create(:name => '定期演奏会')
+Events.create(:name => '盆踊り')
+
+Skills.create(:name => '商業力')
+Skills.create(:name => '演奏力')
+Skills.create(:name => '体力')
