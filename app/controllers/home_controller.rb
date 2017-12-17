@@ -8,5 +8,6 @@ class HomeController < ApplicationController
     #ログインしているユーザーが参加しているコミュニティを取得
     @communities = Community.joins(:members).where("members.user_id = ?", @user.id)
     @events = Event.where(ispublic: true)
+    
   end
 end
