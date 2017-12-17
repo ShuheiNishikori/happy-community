@@ -10,13 +10,17 @@
       </ul>
     </div>
   <% end %>
-
+  
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :コミュニティ名 %>
     <%= form.text_field :name, id: :community_name %>
+    <%= form.fields_for :tags do |df| %>
+    <%= df.label :タグ名 %>
+    <%= df.text_field :name, id: :tag_name %>
+   <% end %>
   </div>
-
+  
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "作成"%>
   </div>
 <% end %>

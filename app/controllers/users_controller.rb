@@ -28,8 +28,14 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        #登録している地域に対応したコミュニティに強制参加させられる
+        community = Community.find_by(name: @user.area)
+        if community
+          Member.participate(@user.id, community.id)
+        end
+        
         log_in @user
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to home_path, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }

@@ -1,13 +1,15 @@
 <p>
-  <h1>
-  Home Page
-  </h1>
+  <h1>Home Page</h1>
 </p>
 
-<p>
-<%= link_to 'コミュニティ検索', '' %>
-</p>
+  <p><%= @user.name %> <%= link_to  'プロフィール編集', edit_user_path(current_user) %>
+    <%= link_to 'コミュニティ検索', '#' %></p>
+  
+  <% @communities.each do |community| %>
+    <p><%= community.name %> <%= link_to 'チャット', messages_path %></p>
+  <% end %>
 
-<p>
-<%= link_to  '編集', '/users' %>
-</p>
+  <% @events.each do |event| %>
+    <p><%= event.name %> <%= link_to '詳細', event %></p>
+  <% end %>
+<p><%= link_to 'コミュニティ作成', new_community_path %></p>
