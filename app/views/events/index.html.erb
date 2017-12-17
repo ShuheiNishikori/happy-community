@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Community</th>
-      <th>Name</th>
+      <th>name</th>
+      <th>公開/非公開</th>
       <th>Event start at</th>
       <th>Event end at</th>
       <th>Place</th>
@@ -19,6 +20,7 @@
       <tr>
         <td><%= event.community_id %></td>
         <td><%= event.name %></td>
+        <td><%= event.ispublic %></td>
         <td><%= event.event_start_at %></td>
         <td><%= event.event_end_at %></td>
         <td><%= event.place %></td>
