@@ -1,3 +1,3 @@
 class Tag < ApplicationRecord
-	has_many :c_tags
+	has_many :community_tags
 end

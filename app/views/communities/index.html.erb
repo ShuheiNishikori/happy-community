@@ -1,11 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Communities</h1>
+<h1>コミュニティ検索</h1>
+  
+<%#　以下をScaffoldingしたindex.html.erbに追記する %>
+<%= form_tag communities_path, :method => 'get' do %> <%#　projects_pathはモデル名で読みかえること %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "検索", :name => nil %>
+    <label><%= radio_button_tag :type, "com",checked: true %>コミュニティ</label>
+    <label><%= radio_button_tag :type, "tag" %>タグ</label>
+  </p>
+<% end %>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
+      <th>コミュニティ名</th>
+      <th>コミュニティID</th>
+      <th>タグ名</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,6 +27,8 @@
       <tr>
         <td><%= community.id %></td>
         <td><%= community.name %></td>
+        <td><%= community.id %></td>
+        <td><%= community.tag_name %></td>
         <td><%= link_to 'Show', community %></td>
         <td><%= link_to 'Edit', edit_community_path(community) %></td>
         <td><%= link_to 'Destroy', community, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -26,3 +40,4 @@
 <br>
 
 <%= link_to 'New Community', new_community_path %>
+

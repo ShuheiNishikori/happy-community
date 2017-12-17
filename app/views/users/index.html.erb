@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+<h1 style="color: #454c50">Users</h1>
 
 <table>
   <thead>
-    <tr>
+    <tr style="color: #454c50">
+
       <!--<th>Password digest</th>-->
-       <th></th>
+
       <th>Name</th>
       <th>Age</th>
       <th>Sex</th>
@@ -16,6 +17,18 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+
+
+</table>
+
+<br>
+
+<a href="/users/new">New User</a>
+
+    </div>
+
+<table>
+
 
   <tbody>
     <% @users.each do |user| %>
@@ -37,5 +50,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>

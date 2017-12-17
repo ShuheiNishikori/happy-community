@@ -4,7 +4,18 @@ class CommunitiesController < ApplicationController
   # GET /communities
   # GET /communities.json
   def index
-    @communities = Community.all
+    type= params[:type]
+    if params[:search]
+      if type == "com"
+        @communities = Community.joins(community_tags: :tag).select("communities.*, tags.name AS tag_name").where(['communities.name LIKE ?', "%#{params[:search]}%"])
+      elsif type == "tag"
+        @communities = Community.joins(community_tags: :tag).select("communities.*, tags.name AS tag_name").where(['tags.name LIKE ?', "%#{params[:search]}%"])
+      else
+        @communities = Community.joins(community_tags: :tag).select("communities.*, tags.name AS tag_name")#全て表示
+      end
+    else
+        @communities = Community.joins(community_tags: :tag).select("communities.*, tags.name AS tag_name")#全て表示。
+    end
   end
 
   # GET /communities/1
@@ -15,6 +26,7 @@ class CommunitiesController < ApplicationController
   # GET /communities/new
   def new
     @community = Community.new
+    @community.tags.build
   end
 
   # GET /communities/1/edit
@@ -73,6 +85,6 @@ class CommunitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def community_params
-      params.require(:community).permit(:name)
+      params.require(:community).permit(:name, tags_attributes: [:name])
     end
 end
