@@ -12,6 +12,11 @@
   <% end %>
   
   <div class="field">
+    <%= form.label :コミュニティID %>
+    <%= form.text_field :community_id, id: :event_community_id %>
+  </div>
+  
+  <div class="field">
     <%= form.label :行事名 %>
     <%= form.text_field :name, id: :event_name %>
   </div>
@@ -29,6 +34,11 @@
   <div class="field">
     <%= form.label :場所 %>
     <%= form.text_field :place, id: :event_place %>
+  </div>
+
+  <div class="field">
+    <%= form.radio_button :ispublic, false, id: :event_ispublic, checked: true %>非公開
+    <%= form.radio_button :ispublic, true, id: :event_ispublic %>公開
   </div>
 
   <div class="actions">
