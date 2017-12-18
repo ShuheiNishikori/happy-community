@@ -6,6 +6,13 @@
   <% end %>
 </div>
 <br/>
+
+<% @events.each do |event| %>
+  <p><%= event.name %> <%= link_to '詳細', event %></p>
+<% end %>
+<br/>
+
+<br/>
 <form>
   <label>
     発言する: <input type="text" data-behavior="speak_chat_messages">

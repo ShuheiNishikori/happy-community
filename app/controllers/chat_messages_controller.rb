@@ -5,5 +5,6 @@ class ChatMessagesController < ApplicationController
     end
     @current_user ||= User.find(session[:user_id])
     @chat_messages = ChatMessage.all
+    @events = Event.where(ispublic: false)
   end
 end
