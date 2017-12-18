@@ -5,9 +5,6 @@ class Community < ApplicationRecord
 
 	has_many :tags, through: :community_tags
 	accepts_nested_attributes_for :tags
-
-	
-	validates	:name, uniqueness: true
 	
 
 end
