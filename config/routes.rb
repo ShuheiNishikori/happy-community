@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   #get 'sessions/new'
   
   #get 'chat_messages/index'
-  get '/index', to: 'chat_messages#index'
+  get   '/chat_messages', to: 'chat_messages#index'
+  post  '/chat_messages', to: 'chat_messages#create'
   
   resources :communities
   resources :messages
@@ -13,6 +14,7 @@ Rails.application.routes.draw do
   resources :events
   resources :skills
   resources :users
+  resources :chat_messages
 
   get '/home', to: 'home#index'
 
