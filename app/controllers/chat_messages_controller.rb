@@ -5,9 +5,11 @@ class ChatMessagesController < ApplicationController
       return redirect_to login_path
     end
     @current_user ||= User.find(session[:user_id])
+
     @community_id = params[:community_id]
     @chat_user = Member.where(community_id: @community_id).select(:user_id)
     @chat_messages = ChatMessage.where(user_id: @chat_user)
+    @events = Event.where(ispublic: false)
   end
 
   private
@@ -22,3 +24,5 @@ class ChatMessagesController < ApplicationController
     end
   
 end
+
+

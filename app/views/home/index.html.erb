@@ -9,6 +9,9 @@
  
     <%= link_to  'プロフィール編集', edit_user_path(current_user), class: 'btn btn-default' %>
     <%= link_to 'コミュニティ検索', communities_path(current_user), class: 'btn btn-default' %>
+  <% @communities.each do |community| %>
+    <p><%= community.name %> <%= link_to 'チャット', messages_path %><%= link_to '編集', edit_community_path(community.id) %></p>
+  <% end %>
   </p>
   <p>行事</p>
   <% @events.each do |event| %>

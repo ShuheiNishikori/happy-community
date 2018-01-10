@@ -10,6 +10,11 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id, id: :message_user_id %>
+  </div>
 
   <div class="field">
     <%= form.label :content %>
