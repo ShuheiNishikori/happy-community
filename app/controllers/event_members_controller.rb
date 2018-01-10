@@ -28,7 +28,7 @@ class EventMembersController < ApplicationController
 
     respond_to do |format|
       if @event_member.save
-        format.html { redirect_to @event_member, notice: 'Event member was successfully created.' }
+        format.html { redirect_to home_path, notice: 'Event member was successfully created.' }
         format.json { render :show, status: :created, location: @event_member }
       else
         format.html { render :new }

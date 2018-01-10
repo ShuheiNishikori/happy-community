@@ -14,9 +14,9 @@
   <div class="field">
     <%= form.label :コミュニティ名 %>
     <%= form.text_field :name, id: :community_name %>
-    <%= form.fields_for :tags do |df| %>
-    <%= df.label :タグ名 %>
-    <%= df.text_field :name, id: :tag_name %>
+    <%= form.label :タグ名 %>
+    <%= form.fields_for :tags do |tags_form|%>
+    <%= tags_form.text_field :name, id: :tag_name %>
     <% end %>
   </div>
   

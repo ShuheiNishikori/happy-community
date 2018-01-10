@@ -24,7 +24,7 @@
   <strong>場所:</strong>
   <%= @event.place %>
 </p>
-<%=link_to '参加', event_members_path(event_member: {event_id: @event.id, user_id: current_user.id}), method: :post%>
+<%= link_to '参加', event_members_path(event_member: {event_id: @event.id, user_id: current_user.id}), method: :post%>
 <%= link_to '編集', edit_event_path(@event) %> |
 <%= link_to '戻る', events_path %>
 
