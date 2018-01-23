@@ -2,6 +2,7 @@
   <h1>ホームページ</h1>
 </p>
 
+
   <p>
     <%= image_tag @user.picture.thumb.url, size: '60x60', 
     style: "border-radius:50%; background:url(@user.picture_url); " if @user.picture? %>
@@ -14,6 +15,7 @@
   <% end %>
   </p>
   <p>行事</p>
+  <p><%= link_to '行事作成', new_event_path ,class: 'btn btn-default'%></p>
   <% @events.each do |event| %>
     <p><%= event.name %> <%= link_to '詳細', event %></p>
   <% end %>
